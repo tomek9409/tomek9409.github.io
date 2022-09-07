@@ -25,6 +25,7 @@
 
 .article {
   background-color: aquamarine;
+  overflow: auto;
 }
 
 .right {
