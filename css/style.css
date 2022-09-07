@@ -1,0 +1,71 @@
+.box {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.box > * {
+  flex: 1 100%;
+}
+
+.article,
+.aside {
+  height: 20vh;
+}
+
+.header {
+  background-color: red;
+}
+
+.left {
+  background-color: green;
+}
+
+.article {
+  background-color: aquamarine;
+}
+
+.right {
+  background-color: pink;
+}
+
+.footer {
+  background-color: purple;
+}
+
+@media all and (min-width: 768px) {
+  .left {
+    order: 1;
+  }
+  .article {
+    order: 2;
+  }
+  .right {
+    order: 3;
+  }
+  .footer {
+    order: 5;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .left {
+    order: 4;
+  }
+  .article {
+    flex: 1 50%;
+  }
+  .right {
+    flex: 1;
+  }
+}
+@media all and (min-width: 992px) {
+  .article {
+    flex: 1 50%;
+  }
+  .aside {
+    flex: 1;
+  }
+}
